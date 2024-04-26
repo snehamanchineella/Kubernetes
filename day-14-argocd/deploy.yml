@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: swiggy-app
+  name: python-flask-deployment
   labels:
-    app: swiggy-app
+    app: python-flask-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: swiggy-app
+      app: python-flask-deployment
   template:
     metadata:
       labels:
-        app: swiggy-app
+        app: python-flask-deployment
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: swiggy-app
-        image: veeranarni/hotstar:latest
+      - name: python-flask-deployment
+        image: babymanchineella123/hotstar:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
