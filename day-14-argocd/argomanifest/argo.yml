@@ -8,11 +8,11 @@ spec:
 
   source:
     repoURL: https://github.com/snehamanchineella/Kubernetes.git
-    targetRevision: HEAD
+    targetRevision: main
     path: day-14-argocd
   destination: 
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: argocd
 
   syncPolicy:
     syncOptions:
